@@ -11,7 +11,7 @@
      [ RADICAL MODE ]
 ```
 
-> Config do `Yazi` tunada como painel de nave espacial de terminal: neon, powerline, ruído de operador, flavor sombrio e uma assinatura visual feita para parecer um console cyberpunk insurgente em pleno colapso bonito.
+> Tunando o  Yazi explorador de arquivos padrão do RADICAL.  painel de nave espacial de terminal: neon, powerline, flavor sombrio e uma assinatura visual cyberpunk e é claro RADICAL!
 
 ## `:: stack visual`
 
