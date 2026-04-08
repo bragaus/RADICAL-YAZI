@@ -1,0 +1,215 @@
+ 
+# : Manager {{{
+[mgr]
+cwd = { fg = "#fe75fe", bold = true }
+ 
+
+[manager.cursor]
+fg = "#000000"           # texto preto para alto contraste
+bg = "#ff6a00"           # laranja neon #ff6a00
+bold = true
+
+#hovered         = { fg = "#f1124f", bg = "#7a04eb", bold = true }
+#hovered         = { fg = "#120458", bg = "#ff8c00", bold = true }
+hovered         = { fg = "#ff6a00", bg = "reset", bold = true }
+
+preview_hovered = { underline = true }
+ 
+find_keyword  = { fg = "#fe75fe", bg = "#120458", bold = true, italic = true, underline = true }
+find_position = { fg = "#f1124f", bg = "reset", bold = true, italic = true }
+ 
+marker_marked   = { fg = "#fe75fe", bg = "#fe75fe" }
+#marker_selected = { fg = "#f1124f", bg = "#f1124f" }
+marker_selected = { fg = "#ff8c00", bg = "#ff8c00" }
+marker_copied   = { fg = "#fe75fe", bg = "#fe75fe" }
+marker_cut      = { fg = "#f1124f", bg = "#f1124f" }
+ 
+count_selected = { fg = "#120458", bg = "#f1124f" }
+count_copied   = { fg = "#120458", bg = "#fe75fe" }
+count_cut      = { fg = "#120458", bg = "#f1124f" }
+ 
+border_symbol = "│"
+border_style  = { fg = "#7a04eb" }
+# : }}}
+ 
+ 
+# : Tabs {{{
+[tabs]
+#active   = { fg = "#120458", bg = "#f1124f", bold = true }
+#inactive = { fg = "#ff00a0", bg = "#120458" }
+#separator_open  = ""
+#separator_close = ""
+
+active   = { fg = "#120458", bg = "#f1124f", bold = true }
+inactive = { fg = "#ff00a0", bg = "#120458" }
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+
+# : }}}
+ 
+ 
+# : Indicator {{{
+[indicator]
+#current = { fg = "#ff8c00", bg = "#ff8c00" }
+#padding = { open = "", close = "" }
+
+current = { fg = "#120458", bg = "#ff6a00", bold = true }
+padding = { open = "", close = "" }
+# : }}}
+
+
+
+# : Mode {{{
+[mode]
+normal_main = { fg = "#120458", bg = "#ff4d6d", bold = true }
+#normal_alt  = { fg = "#120458", bg = "#22e6b8", bold = true }
+normal_alt  = { fg = "#120458", bg = "#00f5ff", bold = true } 
+#select_main = { fg = "#120458", bg = "#fe75fe", bold = true }
+#select_alt  = { fg = "#fe75fe", bg = "#120458" }
+select_main = { fg = "#120458", bg = "#ff8c00", bold = true }
+select_alt  = { fg = "#ff8c00", bg = "#120458", bold = true }
+ 
+unset_main = { fg = "#120458", bg = "#f1124f", bold = true }
+unset_alt  = { fg = "#f1124f", bg = "#120458" }
+# : }}}
+ 
+ 
+# : Status bar {{{
+[status]
+sep_left  = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+#perm_sep   = { fg = "#7a04eb" }
+#perm_type  =  { fg = "#120458", bg = "#ff9900", bold = true }
+#perm_read  = { fg = "#fe75fe" }
+#perm_write = { fg = "#f1124f" }
+#perm_exec  = { fg = "#7a04eb" }
+
+  #perm_sep   = { fg = "#00f5ff", bg = "#120458", bold = true }
+#perm_type  =  { fg = "#120458", bg = "#00f5ff", bold = true }
+#perm_read  = { fg = "#fe75fe", bold = true }
+#perm_write = { fg = "#ffd400", bold = true }
+#perm_exec  = { fg = "#ff4dc4", bold = true }
+
+perm_sep   = { fg = "#120458", bg = "#120458" }
+perm_type  =  { fg = "#120458", bg = "#120458" }
+perm_read  = { fg = "#120458" }
+perm_write = { fg = "#120458" }
+perm_exec  = { fg = "#120458" }
+ 
+
+
+progress_label  = { fg = "#22e6b8", bold = true }
+progress_normal = { fg = "#120458", bg = "#ff4dc4", bold = true }
+progress_error  = { fg = "#120458", bg = "#f1124f", bold = true }
+# : }}}
+ 
+ 
+# : Which {{{
+[which]
+mask            = { bg = "#120458" }
+cand            = { fg = "#fe75fe" }
+rest            = { fg = "#fe75fe" }
+desc            = { fg = "#f1124f" }
+separator       = "  "
+separator_style = { fg = "#7a04eb" }
+# : }}}
+ 
+ 
+# : Confirm {{{
+[confirm]
+border  = { fg = "#7a04eb" }
+title   = { fg = "#f1124f", bold = true }
+content = { fg = "#fe75fe" }
+list    = {}
+btn_yes = { fg = "#fe75fe", underline = true, bold = true }
+btn_no  = { fg = "#f1124f", underline = true, bold = true }
+# : }}}
+ 
+ 
+# : Spotter {{{
+[spot]
+border   = { fg = "#7a04eb" }
+title    = { fg = "#f1124f", bold = true }
+tbl_col  = { fg = "#fe75fe" }
+tbl_cell = { fg = "#fe75fe", underline = true }
+# : }}}
+ 
+ 
+# : Notification {{{
+[notify]
+title_info  = { fg = "#fe75fe" }
+title_warn  = { fg = "#fe75fe" }
+title_error = { fg = "#f1124f" }
+# : }}}
+ 
+ 
+# : Pick {{{
+[pick]
+border   = { fg = "#7a04eb" }
+active   = { fg = "#120458", bg = "#f1124f", bold = true }
+inactive = { fg = "#ff00a0", bg = "#120458" }
+# : }}}
+ 
+ 
+# : Input {{{
+[input]
+border   = { fg = "#7a04eb" }
+title    = { fg = "#fe75fe" }
+value    = { fg = "#f1124f" }
+selected = { reversed = true }
+# : }}}
+ 
+ 
+# : Completion {{{
+[cmp]
+border = { fg = "#7a04eb" }
+# : }}}
+ 
+ 
+# : Tasks {{{
+[tasks]
+border  = { fg = "#7a04eb" }
+title   = { fg = "#f1124f", bold = true }
+hovered = { fg = "#fe75fe", underline = true }
+# : }}}
+ 
+ 
+# : Help {{{
+[help]
+on      = { fg = "#fe75fe" }
+run     = { fg = "#fe75fe" }
+desc    = { fg = "#f1124f" }
+hovered = { reversed = true, bold = true }
+footer  = { fg = "#120458", bg = "#fe75fe" }
+# : }}}
+ 
+ 
+# : File-specific styles {{{
+[filetype]
+rules = [
+  { mime = "inode/directory", fg = "#ff9900", bold = true, underline = true },
+#	{ mime = "inode/directory", fg = "#fe75fe", bold = true },
+	{ mime = "image/*", fg = "#fe75fe" },
+	{ mime = "{audio,video}/*", fg = "#fe75fe" },
+	{ mime = "application/{pdf,doc,rtf,odt,docx,xlsx,pptx}", fg = "#f1124f" },
+	{ name = "*.{txt,md,rst,csv,*json*,toml,yml,yaml,xml,html,ini,cfg,conf,log}", fg = "#ff00a0" },
+	{ name = "*.{pdf,doc,docx,odt,xls,xlsx,ppt,pptx}", fg = "#f1124f" },
+	{ mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#7a04eb" },
+	{ name = "*.{zip,rar,7z,tar,gz,bz2,xz,zst,lz,lzma,iso,img}", fg = "#7a04eb" },
+	{ url = "*", fg = "#ff00a0" },
+	{ url = "*/", fg = "#fe75fe", bold = true },
+	{ name = "*", fg = "#ff00a0" },
+	{ name = "*/", fg = "#fe75fe", bold = true },
+]
+# : }}}
+ 
+# : Icons {{
+[icon]
+dirs = [
+	{ name = "*", text = "󰉋", fg = "#fe75fe" },
+]
+conds = [
+	{ if = "dir", text = "󰉋", fg = "#fe75fe" },
+]
+# : }}

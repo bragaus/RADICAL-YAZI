@@ -1,0 +1,120 @@
+# Cyberpunk 2077 - user requested variant
+# fundo: #FAFAFA
+# texto: #FCEE09
+# linha atual: #00F0FF
+# NOR: #FCEE09
+# 4k: #FF003C
+# powerline: sim
+
+ [mgr]
+cwd = { fg = "#FCEE09", bg = "#FAFAFA", bold = true }
+hovered = { fg = "#FCEE09", bg = "#00F0FF", bold = true }
+preview_hovered = { fg = "#FCEE09", bg = "#00F0FF", bold = true }
+find_keyword = { fg = "#FCEE09", bg = "#FF003C", bold = true }
+find_position = { fg = "#FCEE09", bg = "#00F0FF", bold = true }
+
+marker_marked = { fg = "#FCEE09", bg = "#FCEE09" }
+marker_selected = { fg = "#00F0FF", bg = "#00F0FF" }
+marker_copied = { fg = "#FF003C", bg = "#FF003C" }
+marker_cut = { fg = "#FF003C", bg = "#FF003C" }
+
+count_selected = { fg = "#FCEE09", bg = "#00F0FF", bold = true }
+count_copied = { fg = "#FCEE09", bg = "#FF003C", bold = true }
+count_cut = { fg = "#FCEE09", bg = "#FF003C", bold = true }
+
+ border_symbol = "│"
+border_style = { fg = "#FCEE09", bg = "#FAFAFA" }
+ 
+[tabs]
+active = { fg = "#FCEE09", bg = "#FAFAFA", bold = true }
+inactive = { fg = "#FCEE09", bg = "#FAFAFA" }
+ sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+ 
+ [indicator]
+current = { fg = "#FCEE09", bg = "#00F0FF", bold = true }
+ padding = { open = "", close = "" }
+ 
+ [mode]
+normal_main = { fg = "#FCEE09", bg = "#00F0FF", bold = true }
+normal_alt = { fg = "#FCEE09", bg = "#FAFAFA", bold = true }
+select_main = { fg = "#FCEE09", bg = "#FF003C", bold = true }
+select_alt = { fg = "#FCEE09", bg = "#FAFAFA", bold = true }
+unset_main = { fg = "#FCEE09", bg = "#00F0FF", bold = true }
+unset_alt = { fg = "#FCEE09", bg = "#FAFAFA", bold = true }
+
+ [status]
+sep_left = { open = "", close = "" }
+ sep_right = { open = "", close = "" }
+perm_sep = { fg = "#FCEE09", bg = "#FAFAFA" }
+perm_type = { fg = "#FCEE09", bg = "#FAFAFA", bold = true }
+perm_read = { fg = "#FCEE09", bg = "#FAFAFA", bold = true }
+perm_write = { fg = "#FCEE09", bg = "#FAFAFA", bold = true }
+perm_exec = { fg = "#FCEE09", bg = "#FAFAFA", bold = true }
+progress_label = { fg = "#FCEE09", bg = "#FAFAFA", bold = true }
+progress_normal = { fg = "#FCEE09", bg = "#00F0FF", bold = true }
+progress_error = { fg = "#FCEE09", bg = "#FF003C", bold = true }
+
+ [which]
+mask = { bg = "#FAFAFA" }
+cand = { fg = "#FCEE09", bg = "#FAFAFA", bold = true }
+rest = { fg = "#FCEE09", bg = "#FAFAFA", bold = true }
+desc = { fg = "#FCEE09", bg = "#FAFAFA", bold = true }
+separator = "  "
+separator_style = { fg = "#FCEE09", bg = "#FAFAFA" }
+
+ [confirm]
+border = { fg = "#FCEE09", bg = "#FAFAFA" }
+title = { fg = "#FCEE09", bg = "#FAFAFA", bold = true }
+content = { fg = "#FCEE09", bg = "#FAFAFA", bold = true }
+list = { fg = "#FCEE09", bg = "#FAFAFA" }
+btn_yes = { fg = "#FCEE09", bg = "#00F0FF", bold = true }
+btn_no = { fg = "#FCEE09", bg = "#FF003C", bold = true }
+
+ [spot]
+border = { fg = "#FCEE09", bg = "#FAFAFA" }
+title = { fg = "#FCEE09", bg = "#FAFAFA", bold = true }
+tbl_col = { fg = "#FCEE09", bg = "#FAFAFA", bold = true }
+tbl_cell = { fg = "#FCEE09", bg = "#FAFAFA" }
+
+ [notify]
+title_info = { fg = "#FCEE09", bg = "#00F0FF", bold = true }
+title_warn = { fg = "#FCEE09", bg = "#FAFAFA", bold = true }
+title_error = { fg = "#FCEE09", bg = "#FF003C", bold = true }
+
+ [pick]
+border = { fg = "#FCEE09", bg = "#FAFAFA" }
+active = { fg = "#FCEE09", bg = "#00F0FF", bold = true }
+inactive = { fg = "#FCEE09", bg = "#FAFAFA", bold = true }
+
+ [input]
+border = { fg = "#FCEE09", bg = "#FAFAFA" }
+title = { fg = "#FCEE09", bg = "#FAFAFA", bold = true }
+value = { fg = "#FCEE09", bg = "#FAFAFA", bold = true }
+selected = { fg = "#FCEE09", bg = "#00F0FF", bold = true }
+
+ [cmp]
+border = { fg = "#FCEE09", bg = "#FAFAFA" }
+
+ [tasks]
+border = { fg = "#FCEE09", bg = "#FAFAFA" }
+title = { fg = "#FCEE09", bg = "#FAFAFA", bold = true }
+hovered = { fg = "#FCEE09", bg = "#00F0FF", bold = true }
+
+ [help]
+on = { fg = "#FCEE09", bg = "#FAFAFA", bold = true }
+run = { fg = "#FCEE09", bg = "#FAFAFA", bold = true }
+desc = { fg = "#FCEE09", bg = "#FAFAFA" }
+hovered = { fg = "#FCEE09", bg = "#00F0FF", bold = true }
+footer = { fg = "#FCEE09", bg = "#FAFAFA", bold = true }
+
+ [filetype]
+ rules = [
+  { mime = "inode/directory", fg = "#FCEE09", bg = "#FAFAFA", bold = true },
+  { name = "*4k*", fg = "#FF003C", bg = "#FAFAFA", bold = true },
+  { name = "*4K*", fg = "#FF003C", bg = "#FAFAFA", bold = true },
+  { name = "*NOR*", fg = "#FCEE09", bg = "#FAFAFA", bold = true },
+  { name = "*nor*", fg = "#FCEE09", bg = "#FAFAFA", bold = true },
+  { name = "*", fg = "#FCEE09", bg = "#FAFAFA", bold = true },
+ ]
+

@@ -1,0 +1,65 @@
+# ======================================================
+# CONFIGURAÇÃO GERAL DO YAZI - CYBERPUNK NEON
+# ======================================================
+
+[manager]
+show_hidden = true          # mostrar arquivos ocultos (.config, etc.)
+sort_by = "alphabetical"    # ordenação alfabética
+sort_reverse = false        # ordem crescente
+sort_dir_first = true       # pastas primeiro
+linemode = "size_and_mtime" # densidade melhor: tamanho + data na lista
+
+
+[preview]
+max_width = 800             # largura máxima do preview
+max_height = 600            # altura máxima
+cache_dir = "/tmp/yazi-cache"  # cache de previews
+
+[opener]
+# Abrir arquivos com programas específicos
+edit = [
+  { run = 'sh -c "if command -v nvim >/dev/null 2>&1; then exec nvim \"$@\"; elif command -v vim >/dev/null 2>&1; then exec vim \"$@\"; else exec vi \"$@\"; fi" sh %s', block = true, desc = "Edit in terminal", for = "unix" },
+]
+image = [
+  { run = 'sh -c "if command -v magick >/dev/null 2>&1; then exec magick display \"$1\"; elif command -v display >/dev/null 2>&1; then exec display \"$1\"; else exec xdg-open \"$1\"; fi" sh %s1', orphan = true, desc = "Open image", for = "linux" },
+]
+document = [
+  { run = 'sh -c "if command -v zathura >/dev/null 2>&1; then exec zathura \"$1\"; elif command -v evince >/dev/null 2>&1; then exec evince \"$1\"; elif command -v libreoffice >/dev/null 2>&1; then exec libreoffice \"$1\"; else exec xdg-open \"$1\"; fi" sh %s1', orphan = true, desc = "Open document", for = "linux" },
+]
+media = [
+  { run = 'sh -c "if command -v mpv >/dev/null 2>&1; then exec mpv \"$1\"; elif command -v vlc >/dev/null 2>&1; then exec vlc \"$1\"; else exec xdg-open \"$1\"; fi" sh %s1', orphan = true, desc = "Play media", for = "linux" },
+]
+archive = [
+  { run = 'sh -c "if command -v file-roller >/dev/null 2>&1; then exec file-roller \"$1\"; else exec xdg-open \"$1\"; fi" sh %s1', orphan = true, desc = "Open archive", for = "linux" },
+]
+open = [
+  { run = 'xdg-open %s', orphan = true, desc = "Open with system", for = "linux" },
+]
+
+[open]
+prepend_rules = [
+  { mime = "text/*", use = "edit" },
+  { url = "*.{lua,toml,md,rst,txt,csv,json,jsonc,yaml,yml,xml,html,css,scss,js,jsx,ts,tsx,py,rs,c,cpp,h,hpp,java,go,sh,bash,zsh,fish,ini,cfg,conf,log}", use = "edit" },
+  { mime = "image/*", use = "image" },
+  { mime = "audio/*", use = "media" },
+  { mime = "video/*", use = "media" },
+  { mime = "application/pdf", use = "document" },
+  { mime = "application/{epub+zip,msword,vnd.openxmlformats-officedocument.wordprocessingml.document,vnd.ms-excel,vnd.openxmlformats-officedocument.spreadsheetml.sheet,vnd.ms-powerpoint,vnd.openxmlformats-officedocument.presentationml.presentation,rtf,vnd.oasis.opendocument.text,vnd.oasis.opendocument.spreadsheet,vnd.oasis.opendocument.presentation}", use = "document" },
+  { mime = "application/{zip,x-7z-compressed,x-rar,x-rar-compressed,x-tar,gzip,x-bzip2,x-xz}", use = "archive" },
+]
+append_rules = [
+  { url = "*", use = "open" },
+]
+
+[plugin]
+# Plugins opcionais (ex.: um HUD cyberpunk)
+# O seu yazi-hud está aí, pode configurar
+[[plugin.prepend_fetchers]]
+id = "git"
+url = "*"
+run = "git"
+
+[[plugin.prepend_fetchers]]
+id = "git"
+url = "*/"
+run = "git"

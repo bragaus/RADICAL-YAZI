@@ -1,0 +1,137 @@
+[flavor]
+dark = "lain"
+
+[mgr]
+cwd = { fg = "#ff2ea6", bold = true }
+hovered = { fg = "#070b17", bg = "#b026ff", bold = true }
+preview_hovered = { fg = "#1a1024", bg = "#ff9e57", bold = true }
+find_keyword = { fg = "#070b17", bg = "#ff2ea6", bold = true }
+find_position = { fg = "#1a1024", bg = "#ffb36b", bold = true }
+
+marker_marked = { fg = "#ff2ea6", bg = "#ff2ea6" }
+marker_selected = { fg = "#b026ff", bg = "#b026ff" }
+marker_copied = { fg = "#39ff88", bg = "#39ff88" }
+marker_cut = { fg = "#ff1744", bg = "#ff1744" }
+
+count_selected = { fg = "#070b17", bg = "#b026ff", bold = true }
+count_copied = { fg = "#070b17", bg = "#39ff88", bold = true }
+count_cut = { fg = "#070b17", bg = "#ff1744", bold = true }
+
+border_symbol = "│"
+border_style = { fg = "#6125e8" }
+
+[tabs]
+active = { fg = "#070b17", bg = "#ff9e57", bold = true }
+inactive = { fg = "#8b7dff", bg = "#120a2a" }
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+[indicator]
+current = { fg = "#1a1024", bg = "#ff9e57", bold = true }
+padding = { open = "", close = "" }
+
+[mode]
+normal_main = { fg = "#070b17", bg = "#b026ff", bold = true }
+normal_alt = { fg = "#d3d7ff", bg = "#160b2e", bold = true }
+select_main = { fg = "#070b17", bg = "#ff2ea6", bold = true }
+select_alt = { fg = "#d3d7ff", bg = "#120a2a", bold = true }
+unset_main = { fg = "#1a1024", bg = "#ff9e57", bold = true }
+unset_alt = { fg = "#d3d7ff", bg = "#160b2e", bold = true }
+
+[status]
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+perm_sep = { fg = "#6125e8", bg = "#070b17" }
+perm_type = { fg = "#070b17", bg = "#8b7dff", bold = true }
+perm_read = { fg = "#b026ff", bg = "#070b17", bold = true }
+perm_write = { fg = "#ff2ea6", bg = "#070b17", bold = true }
+perm_exec = { fg = "#ff9e57", bg = "#070b17", bold = true }
+progress_label = { fg = "#d3d7ff", bg = "#160b2e", bold = true }
+progress_normal = { fg = "#1a1024", bg = "#ff9e57", bold = true }
+progress_error = { fg = "#070b17", bg = "#ff1744", bold = true }
+
+[which]
+mask = { bg = "#05070f" }
+cand = { fg = "#b026ff", bg = "#070b17", bold = true }
+rest = { fg = "#d3d7ff", bg = "#070b17" }
+desc = { fg = "#ff9e57", bg = "#070b17" }
+separator = "  "
+separator_style = { fg = "#6125e8", bg = "#070b17" }
+
+[confirm]
+border = { fg = "#6125e8", bg = "#070b17" }
+title = { fg = "#ff2ea6", bg = "#070b17", bold = true }
+content = { fg = "#d3d7ff", bg = "#070b17" }
+list = { fg = "#8fa8ff", bg = "#070b17" }
+btn_yes = { fg = "#070b17", bg = "#39ff88", bold = true }
+btn_no = { fg = "#070b17", bg = "#ff1744", bold = true }
+
+[spot]
+border = { fg = "#6125e8", bg = "#070b17" }
+title = { fg = "#ff2ea6", bg = "#070b17", bold = true }
+tbl_col = { fg = "#b026ff", bg = "#070b17", bold = true }
+tbl_cell = { fg = "#d3d7ff", bg = "#070b17" }
+
+[notify]
+title_info = { fg = "#070b17", bg = "#b026ff", bold = true }
+title_warn = { fg = "#1a1024", bg = "#ff9e57", bold = true }
+title_error = { fg = "#070b17", bg = "#ff1744", bold = true }
+
+[pick]
+border = { fg = "#6125e8", bg = "#070b17" }
+active = { fg = "#070b17", bg = "#b026ff", bold = true }
+inactive = { fg = "#8fa8ff", bg = "#120a2a", bold = true }
+
+[input]
+border = { fg = "#6125e8", bg = "#070b17" }
+title = { fg = "#ff2ea6", bg = "#070b17", bold = true }
+value = { fg = "#d3d7ff", bg = "#070b17", bold = true }
+selected = { fg = "#070b17", bg = "#8b7dff", bold = true }
+
+[cmp]
+border = { fg = "#6125e8", bg = "#070b17" }
+
+[tasks]
+border = { fg = "#6125e8", bg = "#070b17" }
+title = { fg = "#ff2ea6", bg = "#070b17", bold = true }
+hovered = { fg = "#070b17", bg = "#00f0ff", bold = true }
+
+[help]
+on = { fg = "#b026ff", bg = "#070b17", bold = true }
+run = { fg = "#d3d7ff", bg = "#070b17", bold = true }
+desc = { fg = "#ff9e57", bg = "#070b17" }
+hovered = { fg = "#070b17", bg = "#ff2ea6", bold = true }
+footer = { fg = "#1a1024", bg = "#ff9e57", bold = true }
+
+[filetype]
+rules = [
+  { mime = "inode/directory", fg = "#b026ff", bold = true },
+  { mime = "image/*", fg = "#ff2ea6" },
+  { mime = "{audio,video}/*", fg = "#8b7dff" },
+  { mime = "application/{pdf,doc,rtf,odt,docx,xlsx,pptx}", fg = "#ffb36b", bold = true },
+  { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#ff9e57", bold = true },
+  { name = ".*", fg = "#6125e8" },
+  { name = "*.{sh,bash,zsh,fish,ps1}", fg = "#39ff88", bold = true },
+  { name = "*.{txt,md,rst,csv,*json*,toml,yml,yaml,xml,html,ini,cfg,conf,log,lua}", fg = "#d3d7ff" },
+  { url = "*/", fg = "#b026ff", bold = true },
+  { url = "*", fg = "#d3d7ff" },
+  { name = "*/", fg = "#b026ff", bold = true },
+  { name = "*", fg = "#d3d7ff" },
+]
+
+[icon]
+dirs = [
+  { name = "*", text = "󰉋", fg = "#b026ff" },
+]
+files = [
+  { name = "*", text = "", fg = "#ff9e57" },
+]
+exts = [
+  { name = "lua", text = "", fg = "#b026ff" },
+  { name = "toml", text = "", fg = "#ff9e57" },
+  { name = "md", text = "󰍔", fg = "#ffb36b" },
+  { name = "sh", text = "", fg = "#39ff88" },
+]
+conds = [
+  { if = "dir", text = "󰉋", fg = "#b026ff" },
+]

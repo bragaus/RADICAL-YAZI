@@ -1,0 +1,104 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "openai/gpt-5.4-pro",
+  "small_model": "openai/gpt-5.4-mini",
+  "agent": {
+    "build": {
+      "mode": "primary",
+      "description": "Agente principal de implementação com acesso total",
+      "model": "openai/gpt-5.4",
+      "tools": {
+        "write": true,
+        "edit": true,
+        "bash": true
+      }
+    },
+    "plan": {
+      "mode": "primary",
+      "description": "Planejamento e análise sem alterações no código",
+      "model": "openai/gpt-5.4-mini",
+      "tools": {
+        "write": false,
+        "edit": false,
+        "bash": false
+      }
+    },
+    "tech-lead": {
+      "mode": "subagent",
+      "description": "Arquitetura, decisões técnicas e aprovação final",
+      "model": "openai/gpt-5.4-pro",
+      "temperature": 0.1,
+      "tools": {
+        "write": false,
+        "edit": false,
+        "bash": false
+      }
+    },
+    "senior-dev": {
+      "mode": "subagent",
+      "description": "Implementa features complexas e refatorações grandes",
+      "model": "openai/gpt-5.4",
+      "temperature": 0.2,
+      "tools": {
+        "write": true,
+        "edit": true,
+        "bash": true
+      }
+    },
+    "pleno-dev": {
+      "mode": "subagent",
+      "description": "Entrega features normais com bom equilíbrio entre custo e qualidade",
+      "model": "openai/gpt-5.4-mini",
+      "temperature": 0.3,
+      "tools": {
+        "write": true,
+        "edit": true,
+        "bash": false
+      }
+    },
+    "junior-dev": {
+      "mode": "subagent",
+      "description": "Tarefas pequenas, boilerplate, testes simples e ajustes locais",
+      "model": "openai/gpt-5.4-mini",
+      "temperature": 0.2,
+      "tools": {
+        "write": true,
+        "edit": true,
+        "bash": false
+      }
+    },
+    "code-reviewer": {
+      "mode": "subagent",
+      "description": "Revisão de código, bugs, segurança e manutenibilidade",
+      "model": "openai/gpt-5.3-codex",
+      "temperature": 0.1,
+      "tools": {
+        "write": false,
+        "edit": false,
+        "bash": false
+      }
+    },
+    "debugger": {
+      "mode": "subagent",
+      "description": "Investiga falhas, reproduz bugs e reduz o problema ao mínimo",
+      "model": "openai/gpt-5.3-codex",
+      "temperature": 0.1,
+      "tools": {
+        "write": false,
+        "edit": false,
+        "bash": true
+      }
+    },
+    "docs-writer": {
+      "mode": "subagent",
+      "description": "Documentação técnica, README, changelog e guias",
+      "model": "openai/gpt-5.4-mini",
+      "temperature": 0.3,
+      "tools": {
+        "write": true,
+        "edit": true,
+        "bash": false
+      }
+    }
+  }
+}
