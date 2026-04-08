@@ -11,7 +11,7 @@
      [ RADICAL MODE ]
 ```
 
-> Tunando o  Yazi explorador de arquivos padrão do RADICAL.  painel de nave espacial de terminal: neon, powerline, flavor sombrio e uma assinatura visual cyberpunk e é claro RADICAL!
+> Tunando o  Yazi explorador de arquivos padrão do RADICAL. para parecer um painel de nave espacial: neon, powerline, flavor sombrio e uma assinatura visual cyberpunk e é claro RADICAL!
 
 ## `:: stack visual`
 
